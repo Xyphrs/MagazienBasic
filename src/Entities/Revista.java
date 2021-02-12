@@ -1,4 +1,4 @@
-package com.company;
+package Entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -56,6 +56,7 @@ public class Revista implements Serializable {
         return articles.get(i);
 
     }
+
     public List<Article> getArticles() {
         return articles;
     }

@@ -1,4 +1,4 @@
-package com.company;
+package Entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -6,18 +6,18 @@ import java.util.Date;
 public class Article implements Serializable {
     int id_article;
     int id_revista;
-    public Autor autor;
+    public Autor id_autor;
     String titol;
     Date data_creacio;
     boolean publicable;
 
-    public Article(int id_article, String titol, Date data_creacio, boolean publicable, int id_revista, Autor autor) {
+    public Article(int id_article, String titol, Date data_creacio, boolean publicable, int id_revista, Autor id_autor) {
         this.id_article = id_article;
         this.titol = titol;
         this.data_creacio = data_creacio;
         this.publicable = publicable;
         this.id_revista = id_revista;
-        this.autor = autor;
+        this.id_autor = id_autor;
     }
 
     public int getId_article() {
@@ -60,12 +60,12 @@ public class Article implements Serializable {
         this.id_revista = id_revista;
     }
 
-    public Autor getAutor() {
-        return autor;
+    public Autor getId_autor() {
+        return id_autor;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public void setId_autor(Autor autor) {
+        this.id_autor = autor;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Article implements Serializable {
                 ", data_creacio=" + data_creacio +
                 ", publicable=" + publicable +
                 ", id_revista=" + id_revista +
-                ", autor=" + autor +
+                ", autor=" + id_autor +
                 '}';
     }
 }

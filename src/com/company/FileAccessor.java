@@ -1,5 +1,9 @@
 package com.company;
 
+import Entities.Article;
+import Entities.Autor;
+import Entities.Revista;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,12 +14,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.StringTokenizer;
 
-/**
- * @author Joan Anton Pérez
- * @version FileAccessorv01
- * @since 29/12/2015
- */
-
 public class FileAccessor {
 
     ArrayList<Autor> llistaAutors = new ArrayList();
@@ -24,21 +22,6 @@ public class FileAccessor {
 
     public FileAccessor() {
     }
-
-    /**
-     * @param filename
-     *            Aquest String correspon amb l'arxiu on s'emmagatzemen les
-     *            dades de les instancies d'Autor
-     * @throws IOException
-     * @see Autor
-     *
-     *      <dt><b>Preconditions:</b>
-     *      <dd>
-     *      filename<>nil </br> llistaAutors == nil
-     *      <dt><b>Postconditions:</b>
-     *      <dd>
-     *      llistaAutors<>nil
-     */
 
     public void readAutorsFile(String filename) throws IOException {
         int id;
@@ -76,21 +59,6 @@ public class FileAccessor {
         }
     }
 
-    /**
-     *
-     * @param filename
-     *            Aquest String correspon amb l'arxiu on s'emmagatzemen les
-     *            dades de les instancies de Revista
-     * @throws IOException
-     *
-     *             <dt><b>Preconditions:</b>
-     *             <dd>
-     *             filename<>nil </br> llistaRevistes == nil
-     *             <dt><b>Postconditions:</b>
-     *             <dd>
-     *             llistaRevistes<>nil
-     */
-
     public void readMagazinesFile(String filename) throws IOException {
         int id;
         String titol;
@@ -119,27 +87,6 @@ public class FileAccessor {
 
     }
 
-    /**
-     * @param filename
-     *            Aquest String correspon amb l'arxiu on s'emmagatzemen les
-     *            dades de les isntancies de Revista
-     * @return ArrayList d'objectes Revista, amb els seus articles.txt i la
-     *         informació de l'autor
-     * @throws IOException
-     *
-     *             <dt><b>Preconditions:</b>
-     *             <dd>
-     *             filename<>nil </br> llistaRevistes<>nil </br>
-     *             llistaRevistes.getRevista(i).getArticles()== nil</br>
-     *             <dt><b>Postconditions:</b>
-     *             <dd>
-     *             llistaRevistes.getRevistes()<>nil</br>
-     *             llistaRevistes.getRevista(i).getArticles()<>nil</br>
-     *             llistaRevistes.getRevista(i).getArticle(j)<>nil</br>
-     *             llistaRevistes
-     *             .getRevista(i).getArticle(j).getAutor()<>nil</br>
-     *
-     */
     public ArrayList<Revista> readArticlesFile(String filename)
             throws IOException, ParseException {
         Date date;
