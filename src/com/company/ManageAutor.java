@@ -13,9 +13,9 @@ import java.util.List;
 
 public class ManageAutor {
 
-	private static SessionFactory factory;
+	public static SessionFactory factory;
 
-	public static void main(String[] args) throws IOException {
+	public static void start() throws IOException {
 		try {
 			factory = new Configuration().configure().buildSessionFactory();
 		} catch (Throwable ex) {

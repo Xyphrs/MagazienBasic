@@ -8,13 +8,12 @@
       <meta attribute="class-description">
          This class contains the article detail.
       </meta>
-      <id name="id_article" type="int" column="id_article">
-         
-      </id>
-      <property name="id_revista" column="id_revista" type="int"/>
-      <many-to-one name="id_autor" class="Entities.Autor">
-         <column name="id_autor" sql-type="int"/>
+
+      <id name="id_article" type="int" column="id_article"/>
+      <many-to-one name="id_revista" class="Entities.Revista">
+         <column name="id_revista" sql-type="int"/>
       </many-to-one>
+      <many-to-one name="id_autor" class="Entities.Autor"/>
       <property name="titol" column="titol" type="string"/>
       <property name="data_creacio" column="data_creacio" type="java.util.Date"/>
       <property name="publicable" column="publicable" type="boolean"/>

@@ -16,9 +16,9 @@ public class ManageArticles {
 
     private static SessionFactory factory;
 
-    public static void main(String[] args) throws IOException, ParseException {
+    public static void start() throws IOException, ParseException {
         try {
-            factory = new Configuration().configure().buildSessionFactory();
+            factory = ManageAutor.factory;
         } catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
             throw new ExceptionInInitializerError(ex);

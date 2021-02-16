@@ -15,9 +15,9 @@ public class ManageRevista {
 
     private static SessionFactory factory;
 
-    public static void main(String[] args) throws IOException {
+    public static void start() throws IOException {
         try {
-            factory = new Configuration().configure().buildSessionFactory();
+            factory = ManageAutor.factory;
         } catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
             throw new ExceptionInInitializerError(ex);

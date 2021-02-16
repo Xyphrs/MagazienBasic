@@ -11,6 +11,9 @@ public class Article implements Serializable {
     Date data_creacio;
     boolean publicable;
 
+    public Article() {
+    }
+
     public Article(int id_article, String titol, Date data_creacio, boolean publicable, int id_revista, Autor id_autor) {
         this.id_article = id_article;
         this.titol = titol;
